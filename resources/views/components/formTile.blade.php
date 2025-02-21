@@ -9,16 +9,14 @@
             </g>
         </svg>
     </div>
-    <div class="pt-3 sm:pt-5">
-        @if(empty($title))
-        @else
+    <div class="pt-3 sm:pt-5 w-full">
+        @if(isset($title))
             <h2 class="text-xl font-semibold text-black dark:text-white">
                 {{$title}}
             </h2>
         @endif
 
-        @if(empty($text))
-        @else
+        @if(isset($text))
             <p class="my-4">
                 {{$text}}
             </p>

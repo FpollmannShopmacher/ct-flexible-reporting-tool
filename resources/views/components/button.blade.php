@@ -1,4 +1,13 @@
-<button type="submit" class="border-gray-300 border-2 rounded flex ml-0 mr-2 my-4 p-2">
+<button
+        type="submit"
+        name="btn"
+        @if(isset($btnName))
+            name="{{ $btnName}}"
+        @endif
+        @if(isset($btnValue))
+            value="{{ $btnValue}}"
+        @endif
+        class="border-gray-300 border-2 rounded flex ml-0 mr-2 my-4 p-2">
     @if(empty($btnText))@else
         <span>{{$btnText}}</span>
     @endif
